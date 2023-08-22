@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGTRON</title>
+    <link rel="stylesheet" href="css2a/style.css">
+    <link rel="stylesheet" media="screen and (max-width:1200px)" href="phone.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra&family=Heebo:wght@300&family=Karla:wght@200&family=Lato:wght@100&family=Playball&family=Poppins:wght@200&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra&family=Heebo:wght@300&family=Karla:wght@200&family=Lato:wght@100&family=Playball&family=Poppins:wght@200&family=Ubuntu&display=swap"
+        rel="stylesheet">
+
+</head>
+<style>
+    /* CSS Reset */
+    /* *{
+        box-sizing: border-box;
+    } */
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    /* body {
+        overflow: hidden;
+        font-family: 'Alkatra', cursive;
+
+    } */
+
+    /* CSS Variables */
+    :root {
+        --navbar-height: 59px;
+
+    }
+
+    /* Navigation Bar */
+    #navbar {
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 0px;
+    }
+
+    #navbar::before {
+        content: "";
+        background-color: rgb(70, 161, 204);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.3;
+
+    }
+
+    /* Navigation BAR: LOGO AND IMAGE */
+    #logo {
+        margin: 2px 6px;
+
+    }
+
+    #logo img {
+        height: 120px;
+        width: 120px;
+        margin: 2px 4px;
+
+    }
+
+    /* Navigation BAR: Liat Styling */
+    /* #navbar {
+         position: relative;
+     } */
+
+    #navbar ul {
+        display: flex;
+        font-family: 'Alkatra', cursive;
+
+    }
+
+    #navbar ul li {
+        list-style: none;
+        font-size: 1.2rem;
+    }
+
+    #navbar ul li a {
+        color: rgb(20, 60, 120);
+        display: block;
+        padding: 3px 22px;
+        border-radius: 20px;
+        text-decoration: none;
+    }
+
+    #navbar ul li a:hover {
+        color: rgb(7, 78, 136);
+        background-color: white;
+
+
+    }
+
+
+    /* home section */
+    .container {
+        /* margin: 150px auto;
+        width: 50%;
+        padding: 8px; */
+        display: flex;
+        flex-wrap: wrap;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    .container .home {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    img {
+        float: right;
+        width: 500px;
+        height: 500px;
+        padding: 0 10px 0 0;
+
+    }
+
+
+    /* .container.home #img1{
+       
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    } */
+
+
+
+    .home {
+        display: flex;
+        flex-direction: column;
+        padding: 70px 100px;
+    }
+
+    .home::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100px;
+        width: 100px;
+        /* z-index: -1;
+        opacity: 0.; */
+    }
+
+    /* #img1 img{
+        height: 500px;
+        width: 500px;
+        margin: 50px 900px;
+        
+     }  */
+    .home p {
+        font-size: 1.3rem;
+        font-family: 'Alkatra', cursive;
+
+    }
+
+    /* utility classes */
+    h1.head1 {
+        color: black;
+        font-size: 3.0rem;
+        /* padding: 8px; */
+        font-family: 'Alkatra', cursive;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+
+    }
+
+    #Get-Start-btn {
+        font-family: 'Alkatra', cursive;
+        display: block;
+        width: 200px;
+        padding: 6px 12px;
+        border: 2px solid rgb(251, 251, 253);
+        background-color: rgb(36, 15, 170);
+        color: white;
+        margin: 15px;
+        font-size: 1.5rem;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    /* services container */
+    .service-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    .service-container .box {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    /* .home2 img {
+        float: left;
+        width: 500px;
+        height: 500px;
+        margin: 12px 44px;
+        padding: 34px;
+
+    } */
+
+    /* .box::before{
+        content: "";
+        position: absolute;
+        height: 100px;
+        width: 100px;
+    } */
+    h1.head2 {
+        margin: 2px 24px;
+        padding: 34px 100px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    h2.head2a {
+        font-size: 3.0rem;
+        padding: 8px;
+        font-family: 'Alkatra', cursive;
+        /* margin: 2px 34px;
+        padding: 50px; */
+        margin-block-start: 0.24em;
+        margin-block-end: 0.24em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    h4.head2b {
+        font-size: 1.9rem;
+        margin: 1px 3px;
+        opacity: 0.7;
+    }
+
+    .box p {
+        margin: 6px 20px;
+        padding: 28px;
+        font-size: 1.3rem;
+        font-family: 'Alkatra', cursive;
+
+    }
+
+    .head2 {
+        font-size: 3.8rem;
+        color: rgb(67, 67, 203);
+        margin: 0;
+        padding: 0px;
+        text-align: center;
+
+
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .home2 img {
+        float: left;
+        width: 500px;
+        height: 500px;
+        margin: 6px 34px;
+        padding: 0 10px 0 0;
+
+    }
+
+    .container1 {
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        padding: 30px;
+        width: 650px;
+        height: 350px;
+        background-color: rgb(56, 136, 211);
+    }
+
+    h1 {
+
+        color: white;
+        font-size: 2.4rem;
+        font-family: 'Alkatra', cursive;
+    }
+
+    h5 {
+        margin: 2px 4px;
+        padding: 2px;
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    h2.head3 {
+        color: black;
+        font-size: 3.4rem;
+        font-family: 'Alkatra', cursive;
+    }
+
+    .container2 {
+        display: flex;
+        /* flex-wrap: wrap; */
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        /* margin: 150px auto; */
+        /* width: 50%;  */
+        /* padding: 8px; */
+
+    }
+
+    .container2.home3 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .h-primary img {
+        float: right;
+        width: 500px;
+        height: 500px;
+        /* margin: auto;
+        padding: 0 10px 0 0; */
+
+    }
+
+    .home3 {
+
+        display: flex;
+        flex-direction: column;
+        padding: 70px 100px;
+    }
+
+    .home3::before {
+        content: "";
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        /* z-index: -1;
+        opacity: 0.; */
+    }
+
+    .home3 p {
+        float: left;
+        font-size: 1.3rem;
+        font-family: 'Alkatra', cursive;
+
+    }
+
+    .container3 {
+        display: flex;
+        flex-wrap: wrap;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    .container3 .home4 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .container3 img {
+        float: left;
+        width: 500px;
+        height: 500px;
+        /* margin: auto;*/
+        padding: 0 10px 0 0;
+
+    }
+
+    .home4 {
+
+        display: flex;
+        flex-direction: column;
+        padding: 70px 100px;
+    }
+
+    .home4::before {
+        content: "";
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        /* z-index: -1;
+        opacity: 0.; */
+    }
+
+    .home4 p {
+        float: right;
+        font-size: 1.2rem;
+        font-family: 'Alkatra', cursive;
+
+    }
+
+    .home4 h2 {
+        font-size: 2.4rem;
+        font-family: 'Alkatra', cursive;
+        float: right;
+        /* margin: 2px 24px;
+        padding: 34px 100px; */
+        /* text-align: center;
+        justify-content: center; */
+
+    }
+
+    .home4 h5 {
+        color: black;
+        font-size: 1.5rem;
+        padding: 8px;
+        float: right;
+        font-family: 'Alkatra', cursive;
+        opacity: 0.7;
+        /* margin: 2px 34px;
+        padding: 50px; */
+        /* margin-block-start: 0.24em;
+        margin-block-end: 0.24em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px; */
+    }
+
+    .home4 h6 {
+
+        float: right;
+        font-size: 1.2rem;
+        font-family: 'Alkatra', cursive;
+
+    }
+
+    /* services section */
+    #services {
+        margin: 30px;
+        display: flex;
+    }
+
+    #services .box{
+        height: 500px;
+        width: 400px;
+        /* border: 2px solid rgb(108, 106, 106); */
+        padding: 3px;
+        margin: 30px 50px;
+        border-radius: 20px;
+        /* background-color: aliceblue; */
+    }
+
+    #services .box img {
+        /* border-radius: 12px 12px; */
+        height: 400px;
+         width: 350px;
+        margin: auto;
+        display: block;
+    }
+    .container7 .text{
+        color: rgb(5, 90, 194);
+        font-size: 4.2rem;
+        text-align: center;
+        margin: 12px 28px;
+        
+    }
+    .container9 {
+        display: flex;
+    align-items: start;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 10px;
+    /* width: 10%; 
+    display: block; 
+    margin:  0px auto; */
+    }
+    #servicee .boxb img{
+        width: 200px;
+         height: 200px;
+         display: block;
+         margin:  22px 500px;
+         /* justify-content: center;
+         text-align: center; */
+          /* float:;
+     */
+    }
+    .container11{
+        display: flex;
+    align-items: center;
+
+}
+    
+     .container11.col1{
+       
+        margin: 2px 6px;
+    }
+    .col1 .pink-dot{
+        
+    }
+    .col2{
+
+        margin: 2px 6px;
+
+    }
+    .col3{
+        margin: 2px 6px;
+    }
+    .container11{
+        margin: 3px 600px;
+    }
+
+</style>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="bgtron.jpg" alt="BGTRON">
+        </div>
+        <ul>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">About</a></li>
+            <li class="item"><a href="#">Renewable Energy</a></li>
+            <li class="item"><a href="#">Road Map</a></li>
+            <li class="item"><a href="#">Tokenomics</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+
+        <div class="home">
+
+            <p>Blockchain-based, public, and dependable</p>
+            <h1 class="head1">Progressing sustainably for future.</h1>
+            <p>We’re more than an app. More than a cryptocurrency. The solution to Blockchain's carbon impact is
+                crypto-mining with renewable energy.</p>
+            <input type="button" id="Get-Start-btn" value="Get-Start">
+        </div>
+
+        <img src="lpimg.png" alt="server">
+
+    </div>
+
+    <br>
+    <hr>
+    <h1 class="head2 center">About Us</h1>
+    <div class="service-container">
+        <div class="home2">
+            <img src="Group.png" alt="server">
+        </div>
+
+        <div class="box">
+            <h2 class="head2a">Big Green Energy Solution corporation</h2>
+            <h4 class="head2b">Renewable Energy Is Key To The Growth Of Mining</h4>
+            <p>In light of the global environment, fundamental energy technology is currently in a whirlpool of change,
+                switching to new renewable energy. The team has successfully finished the record of new renewable energy
+                in blockchain, allowing it to be regulated based on the blockchain data's transparency and integrity.
+                BGTRON allows the user to control blockchain and emerging renewable energy in real-time.</p>
+        </div>
+    </div>
+
+    <div class="container1">
+        <h1>Why Renewable energy Mining? </h1>
+        <br>
+        <h5>"According to estimates, bitcoin mining consumes 136 terawatt-hours (TWh) every year. The mining industry
+            may be able to influence energy producers to install more renewable sources as it decarbonizes. Mining with
+            renewable energy is the route to go. Using renewable electricity makes a lot of economic sense for many
+            miners. Overall, renewable energy is less expensive than fossil fuels, allowing miners to keep their
+            profitability."</h5>
+        <h5>Bitcoin mining is a necessary component of the economy. It will be here for the duration of this existence,
+            which appears to be infinite at this moment. The most ethical strategy to reduce mining power use is to
+            start from within. This transition comprises a shift to renewable energy and other environmentally friendly
+            options.</h5>
+    </div>
+    <br>
+    <!-- <div class="container2">
+        
+            
+        <div class="home3">
+            <div class="img3"><img src="bgtron.jpg" alt="server"></div>
+            <h2 class="head3">What is Renewable Energy Mining?</h2>
+            <p>
+                "In terms of crypto mining, renewable energy resources have made a difference, and these resources can
+                help make the process more environmentally friendly and sustainable in the long run."
+                <br>
+                <br>
+                "Renewable energy mining is a technology that generates virtual currency/coins through the use of
+                mathematical tools and calculations. Where Crypto mining draws power from renewable energy sources such
+                as solar power, hydroelectric power, and nuclear energy that emit little or no carbon."
+
+            </p>
+            
+            
+        </div> -->
+
+
+    </div>
+    <div class="container2">
+
+        <div class="home3">
+            <h2 class="head3">What is Renewable Energy Mining?</h2>
+
+            <p>
+                "In terms of crypto mining, renewable energy resources have made a difference, and these resources can
+                help make the process more environmentally friendly and sustainable in the long run."
+                <br>
+                <br>
+                "Renewable energy mining is a technology that generates virtual currency/coins through the use of
+                mathematical tools and calculations. Where Crypto mining draws power from renewable energy sources such
+                as solar power, hydroelectric power, and nuclear energy that emit little or no carbon."
+
+
+            </p>
+
+
+        </div>
+        <div class="h-primary"><img src="energy.png" alt=""></div>
+    </div>
+
+    <div class="container3">
+        <div class="h-secondary"><img src="iss.png" alt=""></div>
+
+        <div class="home4">
+
+            <p>POS-POA Based Mining Concepts Renewable Energy Solutions</p>
+            <h2 id="head5">New renewable energy DeFi Solution</h2>
+            <h5 id="head6">New renewable energy Monitoring / Mediation system</h5>
+            <h6 id="head7">"If we want to be prepared for the future, we need to invest in a new and vital field of
+                technology called proof of authority. Unlike PoW mining, a PoA network does not require significant
+                computational processing. It also protects the PoS method from 51 percent attacks, which are
+                high-probability concerns. Validators safeguard the 'nodes' on the PoA network; they are picked
+                democratically by current validators, and the new node can then execute the work alongside other
+                validators. The PoA network's nodes are compensated for validating the network's transactions.
+                Proof-of-Authority with minimal energy consumption but a small number of participants."</h6>
+
+        </div>
+
+    </div>
+    <hr>
+    <section class="container5">
+        <div id="services">
+            <div class="box">
+                <img src="fuel (1).png" alt="">
+            </div>
+            <div class="box">
+                <img src="hydrogan (1).png" alt="">
+            </div>
+            <div class="box">
+                <img src="wind (1).png" alt="">
+            </div>
+        </div>
+    </section>
+    <div class="container7">
+        <div class="text center">
+            <strong>Tokenomics</strong>
+        </div>
+    </div>
+
+    <section class="container9">
+        <div id="servicee">
+            <div class="boxb">
+                <img src="Chart.png" alt="">
+            </div>
+        </div>
+        
+    </section>
+
+<section class="container11">
+    <div class="col1">
+        <span class="pink-dot"></span>
+        <p>Seed round</p>
+    </div>
+    <div class="col2">
+        <p>4%</p>
+    </div>
+    <div class="col3">
+        <span class="gray-dot"></span>
+        <p>public scal</p>
+    </div>
+    <div class="col4">
+        <p>8%</p>
+    </div>
+</section>
+
+</body>
+
+</html>
